@@ -437,21 +437,29 @@ ul li {
     &__add-favorite {
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 16px;
         width: 30px;
         height: 30px;
         background: #ffffff;
-        border: 1px solid #f8f8f8;
+        border: 1px solid #d3d3d3;
         border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 24px;
+            height: 24px;
+            path {
+                fill: #d3d3d3;
+            }
+        }
 
         &:hover {
-            background: #ff8637;
-            border-color: #ff8637;
-            box-shadow: 0px 4px 5px rgba(0, 8, 29, 0.05), 0px 3px 4px rgba(0, 8, 29, 0.06), 0px 2px 6px rgba(0, 8, 29, 0.08);
-
+            border: 1px solid #f8f8f8;
+            background: rgba(23, 60, 97, 0.14);
             svg {
                 path {
-                    fill: #fff;
+                    fill: #ffffff;
                 }
             }
         }
@@ -521,13 +529,11 @@ ul li {
         transition: 0.3s;
 
         &:hover {
-            background: #ff8637;
-            border-color: #ff8637;
-            box-shadow: 0px 4px 5px rgba(0, 8, 29, 0.05), 0px 3px 4px rgba(0, 8, 29, 0.06), 0px 2px 6px rgba(0, 8, 29, 0.08);
-
+            border: 1px solid #f2f2f2;
+            background: rgba(23, 60, 97, 0.14);
             svg {
                 path {
-                    fill: #fff;
+                    fill: #ffffff;
                 }
             }
         }
