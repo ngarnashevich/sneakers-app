@@ -8,11 +8,11 @@ function App() {
           <div className="header__inner">
             <div className="header-logo">
               <div className="header-logo__img">
-                <img src="/img/logo.svg" alt="logo" width="40" height="40" />
+                <img src="/img/logo.png" alt="logo" width="40" height="40" />
               </div>
               <div className="header-logo__text">
                 <div className="header-logo__text-top">REACT SNEAKERS</div>
-                <div className="header-logo__text-bottom">Магазин лучших кроссовок</div>
+                <div className="header-logo__text-bottom">Магазин найкращих кросівок</div>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ function App() {
       <main>
         <div className="container">
           <div className="page-head">
-            <h2 className="title">Все кроссовки</h2>
+            <h2 className="title">Всі кросівки</h2>
             <div className="search">
               <button className="search__btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ function App() {
                     stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" />
                 </svg>
               </button>
-              <input type="text" className="search__input" placeholder="Поиск..." />
+              <input type="text" className="search__input" placeholder="Пошук..." />
             </div>
           </div>
           <div className="product-row">
@@ -85,10 +85,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                  Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -113,10 +113,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                 Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -142,10 +142,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                 Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -171,10 +171,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                 Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -198,10 +198,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                 Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -225,10 +225,10 @@ function App() {
               <div className="product__image">
                 <img src="/img/products-img/image-1.jpg" alt="image-1" width="133" height="112" />
               </div>
-              <div className="product__title">Мужские Кроссовки Nike Blazer Mid Suede</div>
+              <div className="product__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
               <div className="product__footer">
                 <div className="product__price">
-                  Цена:
+                 Ціна:
                   <span>12 999 грн.</span>
                 </div>
                 <button className="product__add-basket">
@@ -249,3 +249,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -454,6 +454,27 @@ ul li {
             }
         }
 
+        &.active {
+            background: #fef0f0;
+            border-color: #fef0f0;
+            svg {
+                fill: #ff8585;
+                path {
+                    fill: #ff8585;
+                }
+            }
+            &:hover {
+                background: #fef0f0;
+                border-color: #fef0f0;
+                svg {
+                    fill: #ff8585;
+                    path {
+                        fill: #ff8585;
+                    }
+                }
+            }
+        }
+
         &:hover {
             border: 1px solid #f8f8f8;
             background: rgba(23, 60, 97, 0.14);
