@@ -1,12 +1,15 @@
+import React from 'react';
 
-function Drawer(){
+
+
+function Drawer({ onCloseDrawer, items = []}){
     return (
-      <div className="overlay" style={{ display: 'none' }}>
+      <div className="overlay">
          <div className="drawer">
 
               <div className="drawer__header">
                   <div className="drawer__title">Кошик</div>
-                  <button className="drawer-close">
+                  <button className="drawer-close" onClick={onCloseDrawer}>
                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1.31738" width="23.593" height="1.86261" rx="0.931304" transform="rotate(45 1.31738 0)" fill="#07081A"/>
                     <rect y="17.3037" width="23.593" height="1.86261" rx="0.931304" transform="rotate(-45 0 17.3037)" fill="#07081A"/>
@@ -15,13 +18,15 @@ function Drawer(){
               </div>
 
               <div className="drawer__body">
-                    <div className="card-item">
+                   {
+                    items.map((obj) => (
+                       <div className="card-item">
                         <div className="card-item__img">
-                        <img type="image" src="/img/products-img/image-1.jpg" alt="product" width="70" height="70" />
+                        <img type="image" src={obj.imageUrl} alt="product" width="70" height="70" />
                         </div>
                         <div className="card-item__body">
-                            <div className="card-item__title">Чоловічі Кросівки Nike Blazer Mid Suede</div>
-                            <div className="card-item__price">12 999 грн.</div>
+                            <div className="card-item__title">{obj.title}</div>
+                            <div className="card-item__price">{obj.price}</div>
                         </div>
                         <div className="card-item__button">
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +34,8 @@ function Drawer(){
                         </svg>
                         </div>
                     </div>
+                    ))
+                   }
               </div>
 
               <div className="drawer__footer">

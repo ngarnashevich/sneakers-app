@@ -4,55 +4,31 @@ import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
 
-const products = [
-  {
-    title: 'Чоловічі кросівки Nike Blazer Mid Suede',
-    price: 2999,
-    imageUrl: '/img/products-img/image-1.jpg'
-  },
-   {
-    title: 'Чоловічі кросівки Nike Blazer Mid Suede',
-    price: 1699,
-    imageUrl: '/img/products-img/image-2.jpg'
-  },
-   {
-    title: 'Кросівки Puma X Aka Boku Future Rider',
-    price: 2299,
-    imageUrl: '/img/products-img/image-3.jpg'
-  },
-   {
-    title: 'Чоловічі кросівки Under Armour Curry 8',
-    price: 1175,
-    imageUrl: '/img/products-img/image-4.jpg'
-  },
-   {
-    title: 'Чоловічі кросівки Nike Kyrie 7',
-    price: 1499,
-    imageUrl: '/img/products-img/image-5.jpg'
-  },
-   {
-    title: 'Чоловічі кросівки Jordan Air Jordan 11',
-    price: 1899,
-    imageUrl: '/img/products-img/image-6.jpg'
-  },
-  {
-    title: 'Чоловічі кросівки Nike LeBron XVIII',
-    price: 1399,
-    imageUrl: '/img/products-img/image-7.jpg'
-  },
-  {
-    title: 'Чоловічі кросівки Nike Lebron XVIII Low',
-    price: 1499,
-    imageUrl: '/img/products-img/image-8.jpg'
-  }
-];
 
 function App() {
+  const [cartOpened, setCartOpened ] = React.useState(false);
+  const [cartItems, setCartItems] = React.useState([]);
+  const [items, setItems] = React.useState([]);
+
+React.useEffect(() => {
+    fetch('https://62d02feb1cc14f8c08863208.mockapi.io/items')
+    .then((res) => {
+      return res.json()
+    })
+    .then((json)=>{
+      setItems(json);
+    });
+}, [])
+
+const onAddToCard = (obj) => {
+  setCartItems([...cartItems, obj]);
+};
+
   return (
     <div className="wrapper">
+      {cartOpened ?  <Drawer items={cartItems} onCloseDrawer={() => { setCartOpened(false)}} /> : null }
 
-     <Drawer />
-     <Header />
+     <Header onClickCart={() => {setCartOpened(true)}}   />
 
       <section className="slider"></section>
 
@@ -72,12 +48,14 @@ function App() {
             </div>
           </div>
           <div className="product-row">
-          {products.map((obj,idx) => (
+          {items.map((item) => (
               <Product
-              title={obj.title}
-              price={obj.price}
-              imageUrl={obj.imageUrl}
-              key={obj.id}
+              title={item.title}
+              price={item.price}
+              imageUrl={item.imageUrl}
+              key={item.id}
+              onClickAddFavorite={() => console.log('Додати до обраного')}
+              onPlus={(obj) => onAddToCard(item)}
               />
           ))}
           </div>
